@@ -27,3 +27,11 @@ let hobbies: any[] = ["Cooking", "Sports"]; // it is not an array of strings onl
 //console.log(typeof hobbies);
 hobbies = [100]; // TypeScript doesn't allow other types in this array
 //hobbies = 100; // still gives error
+
+// tuples - not on javascript
+// arrays with mixed types and limited number of items
+//let address = ["Superstreet", 99];
+
+// if I'm certain the address array will have the same format always
+let address: [string, number] = ["Superstreet", 99];
+//let address: [string, number] = [99, "Superstreet"]; // order is important!

@@ -42,9 +42,25 @@ var Color;
     Color[Color["Blue"] = 2] = "Blue";
 })(Color || (Color = {}));
 var myColor = Color.Green; // console outputs 1
-console.log(myColor);
-// any type
+//console.log(myColor);
+// any type - should be an exception
 var car = "BMW";
-console.log(car);
+//console.log(car);
 car = { brand: "BMW", series: 3 };
-console.log(car);
+//console.log(car);
+// functions
+function returnMyName() {
+    return myName;
+}
+//console.log(returnMyName());
+// void
+function sayHello() {
+    console.log("Hello!");
+    //return 1; // throws an error
+}
+// argument types
+function multiply(value1, value2) {
+    return value1 * value2;
+}
+//console.log(multiply(2, 'Gabriel')); // NaN - Not a Number
+console.log(multiply(2, 2));

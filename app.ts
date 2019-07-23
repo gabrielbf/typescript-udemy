@@ -52,12 +52,29 @@ enum Color {
 	Blue = 2
 }
 let myColor: Color = Color.Green; // console outputs 1
-console.log(myColor);
+//console.log(myColor);
 
-// any type
+// any type - should be an exception
 let car: any = "BMW";
-console.log(car);
+//console.log(car);
 car = { brand: "BMW", series: 3 };
-console.log(car);
+//console.log(car);
 
+// functions
+function returnMyName(): string { // return value is string
+	return myName;
+}
+//console.log(returnMyName());
 
+// void
+function sayHello(): void { // no returns should used
+	console.log("Hello!");
+	//return 1; // throws an error
+}
+
+// argument types
+function multiply(value1: number, value2: number): number {
+	return value1 * value2;
+}
+//console.log(multiply(2, 'Gabriel')); // NaN - Not a Number
+console.log(multiply(2, 2));

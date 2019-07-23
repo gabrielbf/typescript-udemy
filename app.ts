@@ -35,3 +35,21 @@ hobbies = [100]; // TypeScript doesn't allow other types in this array
 // if I'm certain the address array will have the same format always
 let address: [string, number] = ["Superstreet", 99];
 //let address: [string, number] = [99, "Superstreet"]; // order is important!
+
+// enums - number more expressive
+// Creates nem type to be used later
+// Numbers are assigned automatically
+//enum Color {
+//	Gray, // 0
+//	Green, // 1
+//	Blue // 2
+//}
+
+// to set numbers - if numbers not set, increments last number
+enum Color {
+	Gray,
+	Green = 100,
+	Blue = 2
+}
+let myColor: Color = Color.Green; // console outputs 1
+console.log(myColor);

@@ -63,4 +63,12 @@ function multiply(value1, value2) {
     return value1 * value2;
 }
 //console.log(multiply(2, 'Gabriel')); // NaN - Not a Number
-console.log(multiply(2, 2));
+//console.log(multiply(2, 2));
+// 18 Functions as Types
+// function types
+// this will be a function type. it indicates that the variable will only receive functions with 2 numbers as parameters and returning a number. uses ES6 arrow syntax.
+var myMultiply;
+myMultiply = sayHello;
+myMultiply();
+myMultiply = multiply;
+console.log(myMultiply(5, 2));

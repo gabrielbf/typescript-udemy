@@ -2,6 +2,7 @@
 // TypeScript let's you use ES6 while generation other ES versions
 // let creates a block variable
 // var creates a global variable
+console.log("================================================================================");
 console.log("LET & CONST");
 let variable = "Test";
 console.log(variable);
@@ -22,3 +23,12 @@ reset();
 console.log(variable); // returns "Another value"
 
 // 43 Arrow Functions
+console.log("================================================================================");
+console.log("ARROW FUNCTIONS");
+const addNumbers = function(number1: number, number2: number): number {
+	return number1 + number2;
+};
+console.log(addNumbers(10, 3));
+
+const multiplyNumbers = (number1: number, number2: number) => number1 * number2;
+console.log(multiplyNumbers(10, 3));

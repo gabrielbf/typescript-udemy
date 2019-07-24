@@ -114,3 +114,8 @@ var finalValue = "A string";
 if (typeof finalValue == "number") {
     console.log("final value is a number");
 }
+// The "never" Type (added with TypeScript 2.0)
+// never type
+function neverReturns() {
+    throw new Error('An error!');
+}

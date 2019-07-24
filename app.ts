@@ -142,3 +142,11 @@ let complex2: Complex = {
 let myRealRealAge: number | string = 27;
 myRealRealAge = "27";
 //myRealRealAge = true; // doesn't work because the type for this variable is only string OR number
+
+// 23 Checking for Types during Runtime
+// check types
+let finalValue = "A string";
+//if (typeof finalValue == string) // doesn't work
+if (typeof finalValue == "number") {
+	console.log("final value is a number");
+}

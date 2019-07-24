@@ -83,7 +83,23 @@ function multiply(value1: number, value2: number): number {
 // function types
 // this will be a function type. it indicates that the variable will only receive functions with 2 numbers as parameters and returning a number. uses ES6 arrow syntax.
 let myMultiply: (val1: number, val2: number) => number; 
-myMultiply = sayHello;
-myMultiply();
+//myMultiply = sayHello;
+//myMultiply();
 myMultiply = multiply;
-console.log(myMultiply(5, 2));
+//console.log(myMultiply(5, 2));
+
+// 19 Objects and Types
+// objects
+//let userData = { // typescript infers userData to be and object with one string property and one number property
+//	name: "Gabriel",
+//	age: 27
+//};
+//userData = {}; // will give an error the names of the properties are important too
+//userData = {
+//	a: "Hello",
+//	b: 22
+//}; // property names are important
+let userData: { name: string, age: number } = { // after variable name, define types of the properties for this object
+	name: "Gabriel",
+	age: 27
+};

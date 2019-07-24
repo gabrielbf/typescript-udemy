@@ -9,3 +9,14 @@ var myAge = 27;
 // noImplicitAny false
 var anything; // type any because no type was given
 anything = 12;
+// 35 More Compiler Options
+// 36 Compiler Improvements with TypeScript 2.0
+// strictNullChecks checks if variables have been initialized
+function controlMe(isTrue, somethingElse) {
+    var result;
+    if (isTrue) {
+        result = 12;
+    }
+    result = 33;
+    return result;
+}

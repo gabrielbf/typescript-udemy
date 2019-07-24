@@ -6,11 +6,12 @@
         "sourceMap": false,
 	"strictNullChecks": true,
 	"noEmitOnError": false,
-	"noUnusedParameters": true
+	"noUnusedParameters": false
 
     },
     "exclude": [
         "node_modules",
-	"Section 2"
+	"Section 2",
+	"Section 3"
     ]
 }

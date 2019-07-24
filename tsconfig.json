@@ -2,10 +2,10 @@
     "compilerOptions": {
         "module": "commonjs",
         "target": "es5",
-        "noImplicitAny": false,
-        "sourceMap": true,
+        "noImplicitAny": true,
+        "sourceMap": false,
 	"strictNullChecks": true,
-	"noEmitOnError": true
+	"noEmitOnError": false
     },
     "exclude": [
         "node_modules",

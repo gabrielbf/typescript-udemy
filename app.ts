@@ -156,3 +156,15 @@ if (typeof finalValue == "number") {
 function neverReturns(): never { // doesn't return nothing, it never returns
 	throw new Error('An error!');
 }
+
+// 25 Nullable Types (added with TypeScript 2.0)
+// Nullable types
+//let canBeNull = 12;
+//canBeNull = null; // com strictNullChecks this won't work
+let canAlsoBeNull; // undefined and of type any
+canAlsoBeNull = null;
+// can put strictNullChecks in tsconfig.json to be explicit about what can be null and what should never be null
+let canBeNull: number | null = 12;
+canBeNull = null;
+let canThisBeAny = null; // infered to be of type null!
+//canThisBeAny = 12; // won't work 

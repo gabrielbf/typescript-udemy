@@ -87,3 +87,12 @@ var userData = {
     name: "Gabriel",
     age: 27
 };
+// 20 Example: Putting it all together in a Complex Object
+// complex object
+var complex = {
+    data: [100, 3.99, 10],
+    output: function (all) {
+        return this.data;
+    }
+};
+complex = {};

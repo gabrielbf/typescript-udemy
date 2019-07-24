@@ -103,3 +103,14 @@ let userData: { name: string, age: number } = { // after variable name, define t
 	name: "Gabriel",
 	age: 27
 };
+
+// 20 Example: Putting it all together in a Complex Object
+// complex object
+let complex: {data: number[], output: (all: boolean) => number[]} = {
+	data: [100, 3.99, 10],
+
+	output: function (all: boolean): number[] {
+		return this.data;
+	}
+};
+//complex = {}; // does not satisfy the more complex type

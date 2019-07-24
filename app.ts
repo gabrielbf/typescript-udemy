@@ -114,3 +114,23 @@ let complex: {data: number[], output: (all: boolean) => number[]} = {
 	}
 };
 //complex = {}; // does not satisfy the more complex type
+
+//let complex2: {data: number[], output: (all: boolean) => number[]} = {
+//	data: [100, 3.99, 10],
+//
+//	output: function (all: boolean): number[] {
+//		return this.data;
+//	}
+//};
+// if I change the data type to say, any[], then I would have to change in two places
+// type alias to store a type
+
+// type alias
+type Complex = {data: number[], output: (all: boolean) => number[]};
+let complex2: Complex = {
+	data: [100, 3.99, 10],
+
+	output: function (all: boolean): number[] {
+		return this.data;
+	}
+};

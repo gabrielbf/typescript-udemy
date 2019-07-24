@@ -32,3 +32,10 @@ console.log(addNumbers(10, 3));
 
 const multiplyNumbers = (number1: number, number2: number) => number1 * number2;
 console.log(multiplyNumbers(10, 3));
+
+console.log("================================================================================");
+console.log("ARROW FUNCTIONS - VARIATIONS");
+
+const greet = () => {
+	console.log("Hello!");
+}

@@ -101,3 +101,9 @@ var complex2 = {
         return this.data;
     }
 };
+// 22 Allowing multiple Types with Union Types
+//let myRealRealAge = 27 or "27"; // should use any
+//let myRealRealAge: any = 27;
+var myRealRealAge = 27;
+myRealRealAge = "27";
+//myRealRealAge = true; // doesn't work because the type for this variable is only string OR number

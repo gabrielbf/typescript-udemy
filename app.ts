@@ -115,6 +115,7 @@ let complex: {data: number[], output: (all: boolean) => number[]} = {
 };
 //complex = {}; // does not satisfy the more complex type
 
+// 21 Creating custom Types with Type Aliases
 //let complex2: {data: number[], output: (all: boolean) => number[]} = {
 //	data: [100, 3.99, 10],
 //
@@ -134,3 +135,10 @@ let complex2: Complex = {
 		return this.data;
 	}
 };
+
+// 22 Allowing multiple Types with Union Types
+//let myRealRealAge = 27 or "27"; // should use any
+//let myRealRealAge: any = 27;
+let myRealRealAge: number | string = 27;
+myRealRealAge = "27";
+//myRealRealAge = true; // doesn't work because the type for this variable is only string OR number

@@ -129,4 +129,4 @@ canAlsoBeNull = null;
 var canBeNull = 12;
 canBeNull = null;
 var canThisBeAny = null; // infered to be of type null!
-canThisBeAny = 12;
+//canThisBeAny = 12; // won't work 

@@ -107,3 +107,14 @@ const userData = {userName: "Gabriel", age: 27};
 const {userName: myName, age: myAge} = userData; // should be the same names of the properties - can use different name for the variables using colons
 // doesn't have to assign aliases
 console.log(myName, myAge);
+
+// 51 Template Literals
+console.log("================================================================================");
+console.log("TEMPLATE LITERALS");
+// extended string, with more features - kind of
+// uses ` back tick
+const userName = "Gabriel";
+const greeting = "Hello, I'm " + userName;
+const greetingsLiteral = `This is a heading!
+Down here too! ${userName}! `; // ${} prints the value of variable inside string. Like f-strings in Python
+console.log(greetingsLiteral);

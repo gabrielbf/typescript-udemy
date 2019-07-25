@@ -101,3 +101,12 @@ var userData = { userName: "Gabriel", age: 27 };
 var myName = userData.userName, myAge = userData.age; // should be the same names of the properties - can use different name for the variables using colons
 // doesn't have to assign aliases
 console.log(myName, myAge);
+// 51 Template Literals
+console.log("================================================================================");
+console.log("TEMPLATE LITERALS");
+// extended string, with more features - kind of
+// uses ``
+var userName = "Gabriel";
+var greeting = "Hello, I'm " + userName;
+var greetingsLiteral = "This is a heading!\nDown here too! " + userName + "! "; // ${} prints the value of variable inside string. Like f-strings in Python
+console.log(greetingsLiteral);

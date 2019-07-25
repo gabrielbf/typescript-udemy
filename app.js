@@ -53,12 +53,23 @@ person.printAge();
 //const gabriel = new Gabriel("Anna", "gabriel"); // overwrites "Anna" with "Gabriel"
 //console.log(gabriel);
 // 60 Inheritance and Constructors
+//class Gabriel extends Person {
+//	name: string = "Gabriel"; //overrides name in Person class
+//
+//	constructor(username: string) { // when extending, you always have to call super
+//		super("Gabriel", username);
+//	}
+//}
+//const gabriel = new Gabriel("gabriel");
+//console.log(gabriel);
 var Gabriel = /** @class */ (function (_super) {
     __extends(Gabriel, _super);
     function Gabriel(username) {
         var _this = _super.call(this, "Gabriel", username) || this;
         _this.name = "Gabriel"; //overrides name in Person class
+        _this.age = 31; // access parent with this keyword
         return _this;
+        //console.log(this.type); // doesn't work = type is private
     }
     return Gabriel;
 }(Person));

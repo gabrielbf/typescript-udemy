@@ -70,3 +70,26 @@ function makeArray(name) {
 }
 console.log(makeArray("Gabriel", 1, 3, 5, 7, 9));
 // Rest parameters must be last
+// 48 Rest Parameters & Tuples
+// Since TypeScript 3, you can also use tuples as types for rest expressions
+// Functions are equivalent
+function printInfo1(name, age) {
+    console.log('My name is ' + name + ' and I am ' + age + ' years old!');
+}
+function printInfo2() {
+    var info = [];
+    for (var _i = 0; _i < arguments.length; _i++) {
+        info[_i] = arguments[_i];
+    }
+    console.log('My name is ' + info[0] + ' and I am ' + info[1] + ' years old!');
+}
+// 49 Destructuring Arrays
+console.log("================================================================================");
+console.log("DESTRUCTURING");
+var myHobbies = ["Cooking", "Sports"];
+//const hobby1 = myHobbies[0];
+//const hobby2 = myHobbies[1];
+//console.log(myHobbies[0], myHobbies[1]);
+//console.log(hobby1, hobby2);
+var hobby1 = myHobbies[0], hobby2 = myHobbies[1];
+console.log(hobby1, hobby2);

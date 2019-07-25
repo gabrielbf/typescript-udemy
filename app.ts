@@ -69,3 +69,10 @@ console.log(Math.max(33, 99, 10, -3)); // not an array, it's a list
 //console.log(Math.max(numbers)); // compiler error - can't use number[] on function that expects number
 console.log(Math.max(...numbers)); // ... spread operator - spreads the array into single values
 // allows to change arrays into lists without the use of complex loops
+
+// 47 The Rest Operator
+function makeArray(name: string, ...args: number[]) { // rest operator - one or more of the type
+	return args; // would only fetch first value
+}
+console.log(makeArray("Gabriel", 1, 3, 5, 7, 9));
+// Rest parameters must be last

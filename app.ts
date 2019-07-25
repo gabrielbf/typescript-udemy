@@ -107,4 +107,25 @@ console.log(2 * Helpers.PI);
 console.log(Helpers.calcCircunference(8));
 
 // 64 Abstract Classes
+abstract class Project { // Always has to inherit from it
+	projectName: string = "Default Project Name";
+	budget: number = 1000;
 
+	abstract changeName(name: string): void;
+
+	calcBudget(): number {
+		return this.budget * 2;
+	}
+}
+
+class ITProject extends Project {
+	changeName(name: string): void {
+		this.projectName = name;
+	}
+}
+
+//let newProject = new Project(); // Doesn't work because abstract
+let newProject = new ITProject();
+console.log(newProject);
+newProject.changeName("Super IT Project");
+console.log(newProject);

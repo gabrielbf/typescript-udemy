@@ -115,5 +115,31 @@ var Helpers = /** @class */ (function () {
     Helpers.PI = 3.14;
     return Helpers;
 }());
-console.log(2 * Helpers.PI); // won't work
-console.log(Helpers.calcCircunference(8)); // won't work
+console.log(2 * Helpers.PI);
+console.log(Helpers.calcCircunference(8));
+// 64 Abstract Classes
+var Project = /** @class */ (function () {
+    function Project() {
+        this.projectName = "Default Project Name";
+        this.budget = 1000;
+    }
+    Project.prototype.calcBudget = function () {
+        return this.budget * 2;
+    };
+    return Project;
+}());
+var ITProject = /** @class */ (function (_super) {
+    __extends(ITProject, _super);
+    function ITProject() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    ITProject.prototype.changeName = function (name) {
+        this.projectName = name;
+    };
+    return ITProject;
+}(Project));
+//let newProject = new Project(); // Doesn't work because abstract
+var newProject = new ITProject();
+console.log(newProject);
+newProject.changeName("Super IT Project");
+console.log(newProject);

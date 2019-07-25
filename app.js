@@ -1,4 +1,17 @@
 // Section 5: Using Classes to create Objects
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 // 57 Creating Classes and Class Properties
 // ES6 classes
 //class Person {
@@ -31,4 +44,17 @@ var person = new Person("Gabriel", "gabriel");
 //console.log(person.name, person.username, person.age, person.type); // compiler error due to access modifiers
 console.log(person.name, person.username);
 person.printAge();
-person.setType("Cool Guy");
+//person.setType("Cool Guy"); // doesn't work anymore because it's private now
+// 59 Inheritance
+// ES6 and TypeScript
+var Gabriel = /** @class */ (function (_super) {
+    __extends(Gabriel, _super);
+    function Gabriel() {
+        var _this = _super !== null && _super.apply(this, arguments) || this;
+        _this.name = "Gabriel"; //overrides name in Person class
+        return _this;
+    }
+    return Gabriel;
+}(Person));
+var gabriel = new Gabriel("Anna", "gabriel");
+console.log(gabriel);

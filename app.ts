@@ -39,3 +39,11 @@ const person = new Person("Gabriel", "gabriel");
 console.log(person.name, person.username);
 person.printAge();
 //person.setType("Cool Guy"); // doesn't work anymore because it's private now
+
+// 59 Inheritance
+// ES6 and TypeScript
+class Gabriel extends Person {
+	name: string = "Gabriel"; //overrides name in Person class
+}
+const gabriel = new Gabriel("Anna", "gabriel"); // overwrites "Anna" with "Gabriel"
+console.log(gabriel);

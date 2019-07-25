@@ -129,3 +129,20 @@ let newProject = new ITProject();
 console.log(newProject);
 newProject.changeName("Super IT Project");
 console.log(newProject);
+
+// 65 Private Constructors & Singletons (added with TypeScript 2.0)
+class OnlyOne {
+	private static instance: OnlyOne;
+
+	private constructor(public name: string) {} // constructor only accessible within the class body
+
+	static getInstance() {
+		if (!OnlyOne.instance) {
+			OnlyOne.instance = new OnlyOne('The Only One');
+		}
+		return OnlyOne.instance;
+	}
+}
+
+//let wrong = new OnlyOne('The only One'); // doesn't work
+let right = OnlyOne.getInstance();

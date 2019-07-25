@@ -42,8 +42,19 @@ person.printAge();
 
 // 59 Inheritance
 // ES6 and TypeScript
+//class Gabriel extends Person {
+//	name: string = "Gabriel"; //overrides name in Person class
+//}
+//const gabriel = new Gabriel("Anna", "gabriel"); // overwrites "Anna" with "Gabriel"
+//console.log(gabriel);
+
+// 60 Inheritance and Constructors
 class Gabriel extends Person {
 	name: string = "Gabriel"; //overrides name in Person class
+
+	constructor(username: string) { // when extending, you always have to call super
+		super("Gabriel", username);
+	}
 }
-const gabriel = new Gabriel("Anna", "gabriel"); // overwrites "Anna" with "Gabriel"
+const gabriel = new Gabriel("gabriel");
 console.log(gabriel);

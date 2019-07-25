@@ -47,14 +47,20 @@ person.printAge();
 //person.setType("Cool Guy"); // doesn't work anymore because it's private now
 // 59 Inheritance
 // ES6 and TypeScript
+//class Gabriel extends Person {
+//	name: string = "Gabriel"; //overrides name in Person class
+//}
+//const gabriel = new Gabriel("Anna", "gabriel"); // overwrites "Anna" with "Gabriel"
+//console.log(gabriel);
+// 60 Inheritance and Constructors
 var Gabriel = /** @class */ (function (_super) {
     __extends(Gabriel, _super);
-    function Gabriel() {
-        var _this = _super !== null && _super.apply(this, arguments) || this;
+    function Gabriel(username) {
+        var _this = _super.call(this, "Gabriel", username) || this;
         _this.name = "Gabriel"; //overrides name in Person class
         return _this;
     }
     return Gabriel;
 }(Person));
-var gabriel = new Gabriel("Anna", "gabriel");
+var gabriel = new Gabriel("gabriel");
 console.log(gabriel);

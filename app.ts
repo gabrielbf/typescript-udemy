@@ -98,3 +98,12 @@ const myHobbies = ["Cooking", "Sports"];
 //console.log(hobby1, hobby2);
 const [hobby1, hobby2] = myHobbies; // like variable unpacking in Python
 console.log(hobby1, hobby2);
+
+// 50 Destructuring Objects
+const userData = {userName: "Gabriel", age: 27};
+//const userName = userData.userName;
+//const age = userData.age;
+//console.log(userName, age);
+const {userName: myName, age: myAge} = userData; // should be the same names of the properties - can use different name for the variables using colons
+// doesn't have to assign aliases
+console.log(myName, myAge);

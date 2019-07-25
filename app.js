@@ -91,5 +91,13 @@ var myHobbies = ["Cooking", "Sports"];
 //const hobby2 = myHobbies[1];
 //console.log(myHobbies[0], myHobbies[1]);
 //console.log(hobby1, hobby2);
-var hobby1 = myHobbies[0], hobby2 = myHobbies[1];
+var hobby1 = myHobbies[0], hobby2 = myHobbies[1]; // like variable unpacking in Python
 console.log(hobby1, hobby2);
+// 50 Destructuring Objects
+var userData = { userName: "Gabriel", age: 27 };
+//const userName = userData.userName;
+//const age = userData.age;
+//console.log(userName, age);
+var myName = userData.userName, myAge = userData.age; // should be the same names of the properties - can use different name for the variables using colons
+// doesn't have to assign aliases
+console.log(myName, myAge);

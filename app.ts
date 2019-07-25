@@ -36,6 +36,12 @@ console.log(multiplyNumbers(10, 3));
 console.log("================================================================================");
 console.log("ARROW FUNCTIONS - VARIATIONS");
 
+// Arrow function without arguments
 const greet = () => {
 	console.log("Hello!");
 }
+greet();
+
+// Shortest way possible - implies any type
+const greetFriend = friend => console.log(friend);
+greetFriend("Amigo");

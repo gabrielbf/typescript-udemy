@@ -30,6 +30,11 @@ var multiplyNumbers = function (number1, number2) { return number1 * number2; };
 console.log(multiplyNumbers(10, 3));
 console.log("================================================================================");
 console.log("ARROW FUNCTIONS - VARIATIONS");
+// Arrow function without arguments
 var greet = function () {
     console.log("Hello!");
 };
+greet();
+// Shortest way possible - implies any type
+var greetFriend = function (friend) { return console.log(friend); };
+greetFriend("Amigo");

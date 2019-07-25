@@ -45,3 +45,17 @@ greet();
 // Shortest way possible - implies any type
 const greetFriend = friend => console.log(friend);
 greetFriend("Amigo");
+
+// 45 Functions and Default Parameters
+console.log("================================================================================");
+console.log("FUNCTIONS AND DEFAULT PARAMETERS");
+
+const countdown = (start: number = 10): void => { // start has default value set to 10
+	while (start > 0) {
+		start--;
+	}
+	console.log("Done!", start);
+}
+countdown(20);
+countdown();
+// ES6 default parameter have some rules to be followed

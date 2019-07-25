@@ -38,3 +38,15 @@ greet();
 // Shortest way possible - implies any type
 var greetFriend = function (friend) { return console.log(friend); };
 greetFriend("Amigo");
+// 45 Functions and Default Parameters
+console.log("================================================================================");
+console.log("FUNCTIONS AND DEFAULT PARAMETERS");
+var countdown = function (start) {
+    if (start === void 0) { start = 10; }
+    while (start > 0) {
+        start--;
+    }
+    console.log("Done!", start);
+};
+countdown(20);
+countdown();

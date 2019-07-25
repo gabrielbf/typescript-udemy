@@ -59,3 +59,13 @@ const countdown = (start: number = 10): void => { // start has default value set
 countdown(20);
 countdown();
 // ES6 default parameter have some rules to be followed
+
+// 46 The Spread Operator
+console.log("================================================================================");
+console.log("REST AND SPREAD");
+// allow to work with arrays and lists
+const numbers = [1, 10, 99, -5];
+console.log(Math.max(33, 99, 10, -3)); // not an array, it's a list
+//console.log(Math.max(numbers)); // compiler error - can't use number[] on function that expects number
+console.log(Math.max(...numbers)); // ... spread operator - spreads the array into single values
+// allows to change arrays into lists without the use of complex loops

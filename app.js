@@ -105,3 +105,15 @@ plant.species = "AB";
 console.log(plant.species);
 plant.species = "Green plant";
 console.log(plant.species);
+// 63 Static Properties and Methods
+var Helpers = /** @class */ (function () {
+    function Helpers() {
+    }
+    Helpers.calcCircunference = function (diameter) {
+        return this.PI * diameter;
+    };
+    Helpers.PI = 3.14;
+    return Helpers;
+}());
+console.log(2 * Helpers.PI); // won't work
+console.log(Helpers.calcCircunference(8)); // won't work

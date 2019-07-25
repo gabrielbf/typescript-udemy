@@ -95,3 +95,16 @@ plant.species = "AB";
 console.log(plant.species);
 plant.species = "Green plant";
 console.log(plant.species);
+
+// 63 Static Properties and Methods
+class Helpers {
+	static PI: number = 3.14;
+	static calcCircunference(diameter: number): number {
+		return this.PI * diameter;
+	}
+}
+console.log(2 * Helpers.PI);
+console.log(Helpers.calcCircunference(8));
+
+// 64 Abstract Classes
+

@@ -62,6 +62,7 @@ person.printAge();
 //}
 //const gabriel = new Gabriel("gabriel");
 //console.log(gabriel);
+// 61 Inheritance Wrap Up
 var Gabriel = /** @class */ (function (_super) {
     __extends(Gabriel, _super);
     function Gabriel(username) {
@@ -75,3 +76,32 @@ var Gabriel = /** @class */ (function (_super) {
 }(Person));
 var gabriel = new Gabriel("gabriel");
 console.log(gabriel);
+// 62 Getters & Setters
+// Vanilla js has ways to create getters and setters
+var Plant = /** @class */ (function () {
+    function Plant() {
+        this._species = "Default"; // shouldn't use underscore prefix on private - TypeScript style guide
+    }
+    Object.defineProperty(Plant.prototype, "species", {
+        get: function () {
+            return this._species;
+        },
+        set: function (value) {
+            if (value.length > 3) {
+                this._species = value;
+            }
+            else {
+                this._species = "Default";
+            }
+        },
+        enumerable: true,
+        configurable: true
+    });
+    return Plant;
+}());
+var plant = new Plant();
+console.log(plant.species);
+plant.species = "AB";
+console.log(plant.species);
+plant.species = "Green plant";
+console.log(plant.species);

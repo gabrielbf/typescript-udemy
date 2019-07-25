@@ -71,3 +71,27 @@ class Gabriel extends Person {
 }
 const gabriel = new Gabriel("gabriel");
 console.log(gabriel);
+
+// 62 Getters & Setters
+// Vanilla js has ways to create getters and setters
+class Plant {
+	private _species: string = "Default"; // shouldn't use underscore prefix on private - TypeScript style guide
+
+	get species() {
+		return this._species;
+	}
+
+	set species(value: string) { // property name accessible to outside
+		if ( value.length > 3) {
+			this._species = value;	
+		} else {
+			this._species = "Default";
+		}
+	}
+}
+let plant = new Plant();
+console.log(plant.species);
+plant.species = "AB";
+console.log(plant.species);
+plant.species = "Green plant";
+console.log(plant.species);

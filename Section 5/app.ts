@@ -164,4 +164,4 @@ class OnlyOne {
 //let wrong = new OnlyOne('The only One'); // doesn't work
 let right = OnlyOne.getInstance();
 console.log(right.name);
-right.name = "Other stuff"; //
+right.name = "Other stuff"; // can't assign to read only property

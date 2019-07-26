@@ -130,3 +130,5 @@ person.firstName = "Gabe";
 console.log(person.firstName);
 person.firstName = "Gabriel";
 console.log(person.firstName);
+
+// could call tsc with -t es5 to use a different target from the ts config

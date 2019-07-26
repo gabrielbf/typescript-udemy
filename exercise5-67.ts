@@ -78,7 +78,7 @@ class Rectangle extends Form {
 	}
 }
 
-let rect = new Rectangle(30, 2);
+const rect = new Rectangle(30, 2);
 console.log(rect.calcSize());
 
 // Exercise 3 - Make sure to compile to ES5 (set the target in tsconfig.json)
@@ -124,7 +124,7 @@ class Person {
 		}
 	}
 }
-let person = new Person();
+const person = new Person();
 console.log(person.firstName);
 person.firstName = "Gabe";
 console.log(person.firstName);

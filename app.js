@@ -144,10 +144,25 @@ console.log(newProject);
 newProject.changeName("Super IT Project");
 console.log(newProject);
 // 65 Private Constructors & Singletons (added with TypeScript 2.0)
+//class OnlyOne {
+//	private static instance: OnlyOne;
+//
+//	private constructor(public name: string) {} // constructor only accessible within the class body
+//
+//	static getInstance() {
+//		if (!OnlyOne.instance) {
+//			OnlyOne.instance = new OnlyOne('The Only One');
+//		}
+//		return OnlyOne.instance;
+//	}
+//}
+//let wrong = new OnlyOne('The only One'); // doesn't work
+//let right = OnlyOne.getInstance();
+// 66 "readonly Properties (added with TypeScript 2.0)
 var OnlyOne = /** @class */ (function () {
     function OnlyOne(name) {
         this.name = name;
-    }
+    } // constructor only accessible within the class body
     OnlyOne.getInstance = function () {
         if (!OnlyOne.instance) {
             OnlyOne.instance = new OnlyOne('The Only One');
@@ -156,5 +171,7 @@ var OnlyOne = /** @class */ (function () {
     };
     return OnlyOne;
 }());
-var wrong = new OnlyOne('The only One');
+//let wrong = new OnlyOne('The only One'); // doesn't work
 var right = OnlyOne.getInstance();
+console.log(right.name);
+right.name = "Other stuff"; //

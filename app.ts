@@ -32,14 +32,25 @@
 
 // Can bundle all files into one to with --outFile app.js circleMath.ts rectangleMath.ts app.ts
 
-// 73 Namespace Imports
+// 73 Namespace Imports /// <reference path="" />
 /// <reference path="circleMath.ts"/>
 /// <reference path="rectangleMath.ts"/>
 
-const PI = 2.99; // separate from MyMath namespace
-console.log(MyMath.calculateRectangle(10, 20));
-console.log(MyMath.calculateCircunference(3));
-console.log(PI);
+//const PI = 2.99; // separate from MyMath namespace
+//console.log(MyMath.calculateRectangle(10, 20));
+//console.log(MyMath.calculateCircunference(3));
+//console.log(PI);
 
 // Had to remove commojs module from tsconfig.json - changed it to none
 // tsc --outFile app.js
+
+// 74 More on Namespaces
+// Can have namespaces inside namespaces
+// Has to use tsc --outFile app.js
+
+import CircleMath =  MyMath.Circle; // Not ES6 syntax. Creates an alias for MyMath.Circle
+
+const PI = 2.99; // separate from MyMath namespace
+console.log(MyMath.calculateRectangle(10, 20));
+console.log(CircleMath.calculateCircunference(3));
+console.log(PI);

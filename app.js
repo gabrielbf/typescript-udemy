@@ -22,6 +22,6 @@ var SimpleMath = (function () {
     return SimpleMath;
 }());
 var simpleMath = new SimpleMath();
-simpleMath.baseValue = 10;
+simpleMath.baseValue = "something";
 simpleMath.multiplyValue = 20;
 console.log(simpleMath.calculte());

@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var circle_1 = require("./math/circle");
-console.log(circle_1.PI);
-console.log(circle_1.calculateCircunference(10));
-console.log("Testando aqui");
+var Circle = require("./math/circle");
+var rectangle_1 = require("./math/rectangle");
+console.log(Circle.PI);
+console.log(Circle.calculateCircunference(10));
+console.log(rectangle_1.default(20, 50));

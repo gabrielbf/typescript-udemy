@@ -71,13 +71,23 @@
 // create files rectangle.ts and circle.ts
 
 // exported const and function in circle.ts, making them available outside of the file
-import {PI, calculateCircunference } from "./math/circle"; // leave out the file extension - tsc resolves that
+//import {PI, calculateCircunference } from "./math/circle"; // leave out the file extension - tsc resolves that
  
-console.log(PI);
-console.log(calculateCircunference(10));
+//console.log(PI);
+//console.log(calculateCircunference(10));
 //console.log();
 
 // ran npm install --save systemjs@0.21.5
 // we need a module loader
 // Included script at start of index html to execute systemjs.
 // Running with tsc
+
+// 79 Importing & Exporting Modules
+
+//import { PI, calculateCircunference } from "./math/circle"; // leave out the file extension - tsc resolves that
+import * as Circle from "./math/circle"; // import all and alias to Circle
+import calc from "./math/rectangle"; // use another name for the default import in rectangle.ts
+ 
+console.log(Circle.PI);
+console.log(Circle.calculateCircunference(10));
+console.log(calc(20, 50));

@@ -6,8 +6,24 @@ function changeName(person) {
 }
 var person = {
     firstName: "Gabriel",
-    hobbies: ["Cooking", "Sports"]
+    hobbies: ["Cooking", "Sports"],
+    greet: function (lastName) {
+        console.log("Hi, I am " + this.firstName + " " + lastName);
+    }
 };
-greet({ firstName: "Gabriel", age: 27 });
 changeName(person);
 greet(person);
+person.greet("Anything");
+var Person = (function () {
+    function Person() {
+    }
+    Person.prototype.greet = function (lastName) {
+        console.log("Hi, I am " + this.firstName + " " + lastName);
+    };
+    ;
+    return Person;
+}());
+var myPerson = new Person();
+myPerson.firstName = "Gabriel";
+greet(myPerson);
+myPerson.greet("Anything");

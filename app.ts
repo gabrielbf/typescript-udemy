@@ -38,3 +38,10 @@ const testResults: Array<number> = [1.94, 2.33];
 testResults.push(-2.99);
 //testResults.push("string"); // compiler throws error
 console.log(testResults); 
+
+// 96 Generic Types and Arrays
+function printAll<T>(args: T[]) {
+	args.forEach((element) => console.log(element) ); // TypeScript knows it'll be an array because args: T[]
+}
+
+printAll<string>(["Pen", "Pineapple", "Apple", "Pen"]);

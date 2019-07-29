@@ -1,13 +1,13 @@
 function greet(person) {
-    console.log("Hello, " + person.name);
+    console.log("Hello, " + person.firstName);
 }
 function changeName(person) {
-    person.name = "Anna";
+    person.firstName = "Anna";
 }
 var person = {
-    name: "Gabriel",
-    age: 27
+    firstName: "Gabriel",
+    hobbies: ["Cooking", "Sports"]
 };
-greet(person);
+greet({ firstName: "Gabriel", age: 27 });
 changeName(person);
 greet(person);

@@ -2,25 +2,48 @@
 
 // 83 Introduction
 // 84 The Basics about Interfaces
+//interface NamedPerson {
+//	name: string;
+//}
+//
+//function greet(person: NamedPerson ) { // person is an object that has a property named name of type string - contract of the interface. It need to AT LEAST have name: string
+//	console.log("Hello, " + person.name);
+//}
+//
+//function changeName(person: NamedPerson ) { // had to define the interface here again
+//	person.name = "Anna";
+//}
+//
+//const person = { 
+//	name: "Gabriel", // changed from name to firstName, "Hello, undefined"
+//	age: 27
+//};
+
+//greet(person); 
+//changeName(person);
+//greet(person); 
+
+// 85 Interfaces and Properties
 interface NamedPerson {
-	name: string;
+	firstName: string;
+	age?: number; // ? optional argument
+	[propName: string]: any; // special notation for propety that you don't know the name yet
 }
 
 function greet(person: NamedPerson ) { // person is an object that has a property named name of type string - contract of the interface. It need to AT LEAST have name: string
-	console.log("Hello, " + person.name);
+	console.log("Hello, " + person.firstName);
 }
 
 function changeName(person: NamedPerson ) { // had to define the interface here again
-	person.name = "Anna";
+	person.firstName = "Anna";
 }
 
 const person = { 
-	name: "Gabriel", // changed from name to firstName, "Hello, undefined"
-	age: 27
+	firstName: "Gabriel", // changed from name to firstName, "Hello, undefined"
+	hobbies: ["Cooking", "Sports"]
 };
-
-greet(person); // doesn't work anymore
+// special check tsc does when passing object literals
+// const is not check as strictly
+greet({firstName: "Gabriel", age: 27}); // Object literal may only specify known properties, and 'age' does not exist in type 'NamedPerson'. - age property is not defined in the interface
 changeName(person);
-greet(person); // doesn't work anymore
-
-// 85 Interfaces and Properties
+greet(person); 

@@ -85,9 +85,20 @@
 // 79 Importing & Exporting Modules
 
 //import { PI, calculateCircunference } from "./math/circle"; // leave out the file extension - tsc resolves that
+//import * as Circle from "./math/circle"; // import all and alias to Circle
+//import calc from "./math/rectangle"; // use another name for the default import in rectangle.ts
+
+//console.log(Circle.PI);
+//console.log(Circle.calculateCircunference(10));
+//console.log(calc(20, 50));
+
+// 80 Module Resolution
+
 import * as Circle from "./math/circle"; // import all and alias to Circle
+//import { Component } from "@angular/core"; // angular 2 example
+// use tsc knows if its a relative or absolute import 
 import calc from "./math/rectangle"; // use another name for the default import in rectangle.ts
- 
+
 console.log(Circle.PI);
 console.log(Circle.calculateCircunference(10));
 console.log(calc(20, 50));

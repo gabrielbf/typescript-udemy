@@ -120,3 +120,8 @@ const oldPerson: AgedPerson = {
 };
 
 console.log(oldPerson);
+
+
+// 90 What happens once Interfaces get Compiled
+// interfaces do not generate javascript code when compiling
+// They are only here to help with type checking

@@ -94,10 +94,13 @@
 
 // 80 Module Resolution
 
-import * as Circle from "./math/circle"; // import all and alias to Circle
-//import { Component } from "@angular/core"; // angular 2 example
+import * as Circle from "./math/circle"; // relative import
+//import { Component } from "@angular/core"; // angular 2 import example - not relative, absolute
 // use tsc knows if its a relative or absolute import 
-import calc from "./math/rectangle"; // use another name for the default import in rectangle.ts
+import calc from "./math/rectangle"; 
+
+// tsc looks in for absolute imports in the node_modules folder by default 
+// if you have ambient definitions file, looks there
 
 console.log(Circle.PI);
 console.log(Circle.calculateCircunference(10));

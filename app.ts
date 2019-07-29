@@ -105,3 +105,18 @@ myDoubleFunction = function(value1: number, value2: number) {
 };
 
 console.log(myDoubleFunction(10,20));
+
+// 89 Interface Inheritance
+interface AgedPerson extends NamedPerson {
+	age: number; // optinal in NamedPerson, now it's required here
+}
+
+const oldPerson: AgedPerson = {
+	age: 27,
+	firstName: "Gabriel",
+	greet(lastName: string) {
+		console.log("Hello!");	
+	}
+};
+
+console.log(oldPerson);

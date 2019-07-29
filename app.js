@@ -11,3 +11,17 @@ function printAll(args) {
     args.forEach(function (element) { return console.log(element); });
 }
 printAll(["Pen", "Pineapple", "Apple", "Pen"]);
+var echo2 = betterEcho;
+console.log(echo2("Something"));
+var SimpleMath = (function () {
+    function SimpleMath() {
+    }
+    SimpleMath.prototype.calculte = function () {
+        return this.baseValeu * this.multiplyValeu;
+    };
+    return SimpleMath;
+}());
+var simpleMath = new SimpleMath();
+simpleMath.baseValeu = 10;
+simpleMath.multiplyValeu = 20;
+console.log(simpleMath.calculte());

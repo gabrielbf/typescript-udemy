@@ -45,3 +45,12 @@ function printAll<T>(args: T[]) {
 }
 
 printAll<string>(["Pen", "Pineapple", "Apple", "Pen"]);
+
+
+// 97 Using Generic Types
+const echo2: <T>(data: T) => T = betterEcho;
+// new constant receiving a type - everything after the colon and before the equals
+// <T> generics setup
+// function that receives data of type T and returs something of type T
+// the echo2 constant receives the function betterEcho
+console.log(echo2<string>("Something"));

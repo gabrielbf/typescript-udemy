@@ -48,9 +48,36 @@
 // Can have namespaces inside namespaces
 // Has to use tsc --outFile app.js
 
-import CircleMath =  MyMath.Circle; // Not ES6 syntax. Creates an alias for MyMath.Circle
+//import CircleMath =  MyMath.Circle; // Not ES6 syntax. Creates an alias for MyMath.Circle
 
-const PI = 2.99; // separate from MyMath namespace
-console.log(MyMath.calculateRectangle(10, 20));
-console.log(CircleMath.calculateCircunference(3));
+//const PI = 2.99; // separate from MyMath namespace
+//console.log(MyMath.calculateRectangle(10, 20));
+//console.log(CircleMath.calculateCircunference(3));
+//console.log(PI);
+
+// 75 Limitations of Namespaces
+
+//import CircleMath =  MyMath.Circle; // Not ES6 syntax. Creates an alias for MyMath.Circle
+
+//const PI = 2.99; // separate from MyMath namespace
+//console.log(MyMath.calculateRectangle(10, 20));
+//console.log(CircleMath.calculateCircunference(3));
+//console.log(PI);
+
+// our files are not very declarative - ES6 modules are better suited for larger projects
+
+// 76 Modules
+// create folder math
+// create files rectangle.ts and circle.ts
+
+// exported const and function in circle.ts, making them available outside of the file
+import {PI, calculateCircunference } from "./math/circle"; // leave out the file extension - tsc resolves that
+ 
 console.log(PI);
+console.log(calculateCircunference(10));
+//console.log();
+
+// ran npm install --save systemjs@0.21.5
+// we need a module loader
+// Included script at start of index html to execute systemjs.
+// Running with tsc

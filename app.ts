@@ -105,3 +105,17 @@ import calc from "./math/rectangle";
 console.log(Circle.PI);
 console.log(Circle.calculateCircunference(10));
 console.log(calc(20, 50));
+
+// 81 Namespaces vs Modules - Wrap Up
+
+// Namespaces:
+// Organize application with JS Objects
+// Can be split up over multiple files
+// No module loader required
+// Dependencies get difficult to manage in bigger applications
+
+// Modules:
+// Organize application with real Modules
+// Can be split up over multiple files
+// Module loader required
+// Explict dependency declaration

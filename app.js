@@ -17,11 +17,11 @@ var SimpleMath = (function () {
     function SimpleMath() {
     }
     SimpleMath.prototype.calculte = function () {
-        return this.baseValeu * this.multiplyValeu;
+        return +this.baseValue * +this.multiplyValue;
     };
     return SimpleMath;
 }());
 var simpleMath = new SimpleMath();
-simpleMath.baseValeu = 10;
-simpleMath.multiplyValeu = 20;
+simpleMath.baseValue = 10;
+simpleMath.multiplyValue = 20;
 console.log(simpleMath.calculte());

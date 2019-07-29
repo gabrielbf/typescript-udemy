@@ -54,3 +54,19 @@ const echo2: <T>(data: T) => T = betterEcho;
 // function that receives data of type T and returs something of type T
 // the echo2 constant receives the function betterEcho
 console.log(echo2<string>("Something"));
+
+// 98 Creating a Generic Class
+class SimpleMath<T> {
+	baseValue: T;
+	multiplyValue: T;
+	calculte(): number {
+		return +this.baseValue * +this.multiplyValue; // +var explicitly casts the values to numbers. TypeScript knew that there could be value types in calculate that couldn't be multiplied
+	}
+}
+
+const simpleMath = new SimpleMath();
+simpleMath.baseValue = 10;
+//simpleMath.baseValue = "something"; // results in NaN - can't multiply a number with a string
+simpleMath.multiplyValue = 20;
+console.log(simpleMath.calculte());
+// "something" still gives and error

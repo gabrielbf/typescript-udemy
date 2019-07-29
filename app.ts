@@ -32,3 +32,9 @@ console.log(betterEcho("Gabriel").length);
 //console.log(betterEcho<number>("27").length); // doesn't work - says it's using number but passes string
 console.log(betterEcho<string>("27").length); // doesn't work - says it's using number but passes string
 console.log(betterEcho({name: "Gabriel", age: 27}));
+
+// 95 A built-in Generic Type: Arrays
+const testResults: Array<number> = [1.94, 2.33];
+testResults.push(-2.99);
+//testResults.push("string"); // compiler throws error
+console.log(testResults); 

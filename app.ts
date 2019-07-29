@@ -22,12 +22,24 @@
 // 72 Namespaces and Multiple Files
 // Create 2 files, rectangleMath.ts and circleMath.ts
 
-const PI = 2.99; // separate from MyMath namespace
+//const PI = 2.99; // separate from MyMath namespace
 
 // doesn't import the other two files
 // Namespaces get combined since they share the same name
+//console.log(MyMath.calculateRectangle(10, 20));
+//console.log(MyMath.calculateCircunference(3));
+//console.log(PI);
+
+// Can bundle all files into one to with --outFile app.js circleMath.ts rectangleMath.ts app.ts
+
+// 73 Namespace Imports
+/// <reference path="circleMath.ts"/>
+/// <reference path="rectangleMath.ts"/>
+
+const PI = 2.99; // separate from MyMath namespace
 console.log(MyMath.calculateRectangle(10, 20));
 console.log(MyMath.calculateCircunference(3));
 console.log(PI);
 
-// Can bundle all files into one to with --outFile app.js circleMath.ts rectangleMath.ts app.ts
+// Had to remove commojs module from tsconfig.json - changed it to none
+// tsc --outFile app.js

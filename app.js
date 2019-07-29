@@ -1,7 +1,13 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-var Circle = require("./math/circle");
-var rectangle_1 = require("./math/rectangle");
-console.log(Circle.PI);
-console.log(Circle.calculateCircunference(10));
-console.log(rectangle_1.default(20, 50));
+function greet(person) {
+    console.log("Hello, " + person.name);
+}
+function changeName(person) {
+    person.name = "Anna";
+}
+var person = {
+    name: "Gabriel",
+    age: 27
+};
+greet(person);
+changeName(person);
+greet(person);

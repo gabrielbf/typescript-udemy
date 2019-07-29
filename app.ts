@@ -72,16 +72,30 @@ console.log(echo2<string>("Something"));
 // "something" still gives and error
 
 // 99 Constraints
-class SimpleMath<T extends number | string> { // control which values are passed with extends
+//class SimpleMath<T extends number | string> { // control which values are passed with extends
+//	baseValue: T;
+//	multiplyValue: T;
+//	calculte(): number {
+//		return +this.baseValue * +this.multiplyValue; // +var explicitly casts the values to numbers. TypeScript knew that there could be value types in calculate that couldn't be multiplied
+//	}
+//}
+//
+//const simpleMath = new SimpleMath<number>(); // now this gives a compilation error
+//simpleMath.baseValue = 10;
+//simpleMath.baseValue = "something"; // results in NaN - can't multiply a number with a string
+//simpleMath.multiplyValue = 20;
+//console.log(simpleMath.calculte());
+
+// 100 Using more than one Generic type
+class SimpleMath<T extends number | string, U extends number | string> { 
 	baseValue: T;
-	multiplyValue: T;
+	multiplyValue: U;
 	calculte(): number {
-		return +this.baseValue * +this.multiplyValue; // +var explicitly casts the values to numbers. TypeScript knew that there could be value types in calculate that couldn't be multiplied
+		return +this.baseValue * +this.multiplyValue; 
 	}
 }
 
-const simpleMath = new SimpleMath<number>(); // now this gives a compilation error
-//simpleMath.baseValue = 10;
-simpleMath.baseValue = "something"; // results in NaN - can't multiply a number with a string
+const simpleMath = new SimpleMath<string, number>(); // now this gives a compilation error
+simpleMath.baseValue = "10";
 simpleMath.multiplyValue = 20;
 console.log(simpleMath.calculte());

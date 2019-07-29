@@ -80,7 +80,7 @@ greet(person);
 person.greet("Anything");
 
 
-// 84 Using Interfaces with Classes
+// 87 Using Interfaces with Classes
 class Person implements NamedPerson {
 	firstName: string;
 	lastName: string; // can have extra properties - will still work
@@ -93,3 +93,15 @@ const myPerson = new Person();
 myPerson.firstName = "Gabriel";
 greet(myPerson);
 myPerson.greet("Anything");
+
+// 88 Interfaces and Function Types 
+interface DoubleValueFunc { // creates a interface for a function type
+	(number1: number, number2: number): number;
+}
+
+let myDoubleFunction: DoubleValueFunc;
+myDoubleFunction = function(value1: number, value2: number) {
+	return (value1 + value2) * 2;
+};
+
+console.log(myDoubleFunction(10,20));

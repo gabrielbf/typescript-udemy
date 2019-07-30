@@ -23,3 +23,19 @@ class Car {
 	constructor() {
 	}
 }
+
+// 107 Creating a useful Decorator
+function printable(constructorFn: Function) {
+	constructorFn.prototype.print = function() {
+		console.log(this);
+	}
+}
+
+@printable
+class Plant {
+	name = "Green Plant";
+}
+
+const plant = new Plant();
+(<any>plant).print();
+

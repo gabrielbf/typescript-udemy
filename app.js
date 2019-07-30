@@ -27,3 +27,19 @@ var Car = (function () {
     ], Car);
     return Car;
 }());
+function printable(constructorFn) {
+    constructorFn.prototype.print = function () {
+        console.log(this);
+    };
+}
+var Plant = (function () {
+    function Plant() {
+        this.name = "Green Plant";
+    }
+    Plant = __decorate([
+        printable
+    ], Plant);
+    return Plant;
+}());
+var plant = new Plant();
+plant.print();

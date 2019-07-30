@@ -48,3 +48,6 @@ class Plant {
 
 const plant = new Plant();
 (<any>plant).print();
+
+// 109 A first summary
+// each type of decorator has a method signature. Look for them in the TypeScript documentation

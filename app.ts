@@ -31,6 +31,16 @@ function printable(constructorFn: Function) {
 	}
 }
 
+//@printable
+//class Plant {
+//	name = "Green Plant";
+//}
+//
+//const plant = new Plant();
+//(<any>plant).print();
+
+// 108 Using Multiple Decorators
+@logging(true)
 @printable
 class Plant {
 	name = "Green Plant";
@@ -38,4 +48,3 @@ class Plant {
 
 const plant = new Plant();
 (<any>plant).print();
-

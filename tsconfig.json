@@ -3,7 +3,8 @@
         "module": "commonjs",
         "target": "es5",
         "sourceMap": false,
-	"removeComments": true
+	"removeComments": true,
+	"experimentalDecorators": true
 
     },
     "exclude": [

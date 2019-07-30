@@ -1,27 +1,29 @@
-function betterEcho(data) {
-    return data;
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+function logged(constructorFn) {
+    console.log(constructorFn);
 }
-console.log(betterEcho("Gabriel").length);
-console.log(betterEcho("27").length);
-console.log(betterEcho({ name: "Gabriel", age: 27 }));
-var testResults = [1.94, 2.33];
-testResults.push(-2.99);
-console.log(testResults);
-function printAll(args) {
-    args.forEach(function (element) { return console.log(element); });
-}
-printAll(["Pen", "Pineapple", "Apple", "Pen"]);
-var echo2 = betterEcho;
-console.log(echo2("Something"));
-var SimpleMath = (function () {
-    function SimpleMath() {
+var Person = (function () {
+    function Person() {
+        console.log("Hi!");
     }
-    SimpleMath.prototype.calculte = function () {
-        return +this.baseValue * +this.multiplyValue;
-    };
-    return SimpleMath;
+    Person = __decorate([
+        logged
+    ], Person);
+    return Person;
 }());
-var simpleMath = new SimpleMath();
-simpleMath.baseValue = "10";
-simpleMath.multiplyValue = 20;
-console.log(simpleMath.calculte());
+function logging(value) {
+    return value ? logged : null;
+}
+var Car = (function () {
+    function Car() {
+    }
+    Car = __decorate([
+        logging(true)
+    ], Car);
+    return Car;
+}());

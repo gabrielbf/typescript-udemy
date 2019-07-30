@@ -2,25 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Learning TypeScript</title>
-    <script src="node_modules/systemjs/dist/system.js"></script>
+    <title>TypeScript & Third-Party Libraries</title>
 </head>
 <body>
+	<button>Click Me</button>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+		integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+		crossorigin="anonymous">
+	</script>
+	<script src="app.js"></script>
 	<script>
-		//set our baseURL reference path
-		SystemJS.config({
-			baseURL: '/',
-			packages: {
-				'/': {
-					defaultExtension: 'js'
-				}
-			}
-		});
-
-		SystemJS.import('app.js');
+		$('button').click(function() {
+			alert('Button was clicked')
+		})
 	</script>
 </body>
 </html>

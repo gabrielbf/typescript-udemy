@@ -27,4 +27,6 @@ $('button').click(function() {
 // Search for DefinitelyTyped jquery to find the github with the definitions files 
 
 // 118 Using Public Type Definitions
+// npm install --save-dev @type/jquery
 
+// 119 Wrap Up

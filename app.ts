@@ -51,3 +51,31 @@ const plant = new Plant();
 
 // 109 A first summary
 // each type of decorator has a method signature. Look for them in the TypeScript documentation
+
+// 110 Method Decorators
+function editable(value: boolean) {
+	return function(target: any, propName: string, descriptor: PropertyDescriptor) { // PropertyDescriptor is from js
+		// if the method should be writable or not
+		descriptor.writable = value;
+	}
+}
+
+
+class Project {
+	projectName: string;
+	constructor(name: string) {
+		this.projectName = name;
+	}
+
+	@editable(false) // now the method can't be rewritable
+	calcBudget() {
+		console.log(1000);
+	}
+}
+
+const project = new Project("Super Project");
+project.calcBudget();
+project.calcBudget =  function() {
+	console.log(2000);
+}
+project.calcBudget();

@@ -6,6 +6,7 @@
     "systemjs": "^0.21.5"
   },
   "devDependencies": {
+    "@types/jquery": "^3.3.30",
     "lite-server": "^2.5.3"
   },
   "scripts": {
